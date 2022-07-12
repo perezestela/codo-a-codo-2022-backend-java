@@ -10,8 +10,6 @@ public class Producto {
 	private String imagen; 
 	private String codigo;
 	
-	//crtl+shift+s (genero el constructor usando los campos)
-	
 	public Producto(Long idProducto, String nombre, Float precio, Date fecha, String imagen, String codigo) {
 		super();
 		this.idProducto = idProducto;
@@ -21,8 +19,6 @@ public class Producto {
 		this.imagen = imagen;
 		this.codigo = codigo;
 	}
-	
-	//alt+shift+s (genero los get)
 
 	public Long getIdProducto() {
 		return idProducto;

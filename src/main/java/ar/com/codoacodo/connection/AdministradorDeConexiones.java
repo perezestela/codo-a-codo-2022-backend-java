@@ -6,13 +6,13 @@ import java.sql.DriverManager;
 public class AdministradorDeConexiones {
 
 	public static Connection getConnection() {
-		/* ESTA ES UNA CONECTION LOCAL
-		 String url = "jdbc:mysql://127.0.0.1:3306/codo-a-codo?serverTimeZone=UTC&userSSL=false";
+		/* Esto lo uso solo local
+		String url = "jdbc:mysql://127.0.0.1:3306/codo-a-codo?serverTimeZone=UTC&userSSL=false";
 		String username = "root";
 		String password = "Damilearoci&3";
 		
 		String driverName = "com.mysql.cj.jdbc.Driver";//mysql|postrges
-		*/
+		 */
 		String url = System.getenv("DATASOURCE_URL");
 		String user = System.getenv("DATASOURCE_USERNAME");
 		String password = System.getenv("DATASOURCE_PASSWORD");
@@ -21,7 +21,7 @@ public class AdministradorDeConexiones {
 		//control errores
 		Connection con = null;
 		try {
-			Class.forName(driverName);//carga en memoria el Diver
+			Class.forName(driverName);//carga en memoria el Driver
 			con = DriverManager.getConnection(url,user,password);
 		}catch(Exception e) {
 			e.printStackTrace();//se que paso lo o porque fallo.
