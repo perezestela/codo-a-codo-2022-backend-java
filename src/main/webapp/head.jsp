@@ -1,0 +1,1 @@
+<link href="<%=request.getContextPath()%>/css/bootstrap.css" rel="stylesheet">
